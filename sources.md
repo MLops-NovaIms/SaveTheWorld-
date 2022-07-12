@@ -13,4 +13,8 @@ It seems good and we could choose the monthly average temperature and monthly pr
 
 [wordclim](https://www.worldclim.org/data/monthlywth.html)
 
-This is another source of data on precipitation and air temperature that we can use
+This is another source of data on precipitation and air temperature that we can use. These data are from 1960 to 2018.
+
+
+[portal do clima] (http://portaldoclima.pt/en/#)
+This is another source of data on precipitation and air temperature that we can use. These data are from 1971 to 2000.
