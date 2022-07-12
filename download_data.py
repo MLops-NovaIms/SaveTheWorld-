@@ -4,7 +4,7 @@ from subprocess import Popen, PIPE
 #define url to open (request csv file)
 url = "https://snirh.pt/snirh/_dadosbase/site/paraCSV/dados_csv.php?sites=920685260&pars=1436794570,1520200094&tmin=01/10/1965&tmax=10/03/2022&formato=csv"
 
-#open url using calling curl from the command line
+#open url calling curl from the command line
 get = Popen(['curl', '-k', url], stdout=PIPE)
 
 #read, decode and store the result in a variable
@@ -23,7 +23,7 @@ final_result = [i for i in result_lines_split if len(i)==6]
 #conver to pandas dataframe
 final_result_df = pd.DataFrame(final_result)
 
-#maker 1st row to be the header
+#make 1st row to be the header
 final_result_df = final_result_df.rename(columns=final_result_df.iloc[0]).drop(final_result_df.index[0])
 
 #replace empty values with np.nan
