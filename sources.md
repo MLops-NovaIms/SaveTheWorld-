@@ -5,3 +5,6 @@ I will attach a dataset that I found in the wikidata
 
 From SNIRH database we have data for monthly mean air temperature and monthly precipitation from 01/10/1980 to 01/02/2022.
 With these data we can understand the correlation between precipitation and air temperature and answer the main question of client has.
+
+It seems good and we could choose the monthly average temperature and monthly precipitation value
+
