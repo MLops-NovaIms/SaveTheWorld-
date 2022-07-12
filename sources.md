@@ -9,3 +9,8 @@ With these data we can understand the correlation between precipitation and air 
 
 It seems good and we could choose the monthly average temperature and monthly precipitation value
 
+
+
+[wordclim](https://www.worldclim.org/data/monthlywth.html)
+
+This is another source of data on precipitation and air temperature that we can use
