@@ -37,4 +37,4 @@ final_result_df.rename(columns={final_result_df.columns[0]: "Date" }, inplace = 
 
 
 #save data
-final_result_df.to_csv('enter_path/Download_SNIRH.csv')
+final_result_df.to_csv(r"C:\Users\Daniel Moraes\Downloads\Download_SNIRH.csv", encoding="latin")
