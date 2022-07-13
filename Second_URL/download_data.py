@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from subprocess import Popen, PIPE
 
 #define url to open (request csv file)
