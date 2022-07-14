@@ -1,22 +1,18 @@
-from .. import downloadData
+from .. import downloadData, cleanDownloadedData
+import pytest
 
 
 
 def test_DownloadResult():
     assert downloadData()
 
-def checkDates(df):
+@pytest.fixture
+def df():
+    return cleanDownloadedData(downloadData())
 
-    dates = df.Date
 
-    try:
-        check = pd.to_datetime(dates)
-    except:
-        check = None
-    print(check)
-    return check
 
-def checkNumFormat(df):
+def test_checkNumFormat(df):
 
     prec = df.Precipitation
     temp = df.Temperature
@@ -28,27 +24,30 @@ def checkNumFormat(df):
         check_prec = None
         check_temp = None
     
-    return None if (check_prec is None or check_temp is None) else 'Its ok'
+    assert (check_prec is not None and check_temp is not None)
+    #return None if (check_prec is None or check_temp is None) else 'Its ok'
 
-def checkPrecRange(df):
+def test_checkPrecRange(df):
     prec = df.Precipitation
     prec = prec.astype('float')
     prec_not_nan = prec[~prec.isnull()]
     is_in_range = ~prec_not_nan.between(0, 1000)
     sum_outside = is_in_range.sum()
 
-    return None if sum_outside>0 else 'Its ok'
+    assert sum_outside==0
+    #return None if sum_outside>0 else 'Its ok'
 
-def checkPrecRange(df):
+def test_checkPrecRange(df):
     temp = df.Temperature
     temp = temp.astype('float')
     temp_not_nan = temp[~temp.isnull()]
     is_in_range = ~temp_not_nan.between(-40, 70)
     sum_outside = is_in_range.sum()
 
-    return None if sum_outside>0 else 'Its ok'
+    assert sum_outside==0
+    #return None if sum_outside>0 else 'Its ok'
 
-def checkVariation(df):
+def test_checkVariation(df):
     temp = df.Temperature
     temp = temp.astype('float')
     prec = df.Precipitation
@@ -66,6 +65,7 @@ def checkVariation(df):
     sum_diff_temp = (abs(temp_diff) > 50).sum()
     sum_diff_prec = (abs(prec_diff) > 500).sum()
 
-    return None if (sum_diff_temp>0 or sum_diff_prec>0) else 'Its ok'
+    assert (sum_diff_temp==0 and sum_diff_prec==0)
+    #return None if (sum_diff_temp>0 or sum_diff_prec>0) else 'Its ok'
 
 
