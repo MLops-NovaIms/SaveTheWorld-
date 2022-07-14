@@ -13,7 +13,7 @@ Our research aims to answer the following questions:
 
 ## Data source
 
-The use of the contents of the [SNIRH]https://snirh.pt/index.php?idMain=2&idItem=3 website is allowed, as long as the source is mentioned. 
+The use of the contents of the [SNIRH](https://snirh.pt/index.php?idMain=2&idItem=3) website is allowed, as long as the source is mentioned. 
 
 ## OurTeam
 
