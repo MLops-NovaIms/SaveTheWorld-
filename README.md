@@ -11,6 +11,10 @@ Our research aims to answer the following questions:
 • How much will rain in the next 5 years? Is the rain enough to be used for gardening and recycling the rainwater for the pool?
 
 
+## Data source
+
+The use of the contents of the [SNIRH](https://snirh.pt/index.php?idMain=2&idItem=3) website is allowed, as long as the source is mentioned. 
+
 ## OurTeam
 
 Maria, Rosa, Bruna, Daniel and [JJ](https://github.com/JJ)
