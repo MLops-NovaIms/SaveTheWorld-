@@ -39,7 +39,9 @@ def cleanDownloadedData(downloaded):
     final_result_df.dropna(how='all',axis=1, inplace=True)
 
     #rename first column to 'Date'
-    final_result_df.rename(columns={final_result_df.columns[0]: "Date" }, inplace = True)
+    final_result_df.rename(columns={final_result_df.columns[0]: "Date", 
+                                    final_result_df.columns[1]: "Precipitation"
+                                    final_result_df.columns[2]: "Temperature"}, inplace = True)
 
     return final_result_df
 
