@@ -40,7 +40,7 @@ def cleanDownloadedData(downloaded):
 
     #rename first column to 'Date'
     final_result_df.rename(columns={final_result_df.columns[0]: "Date", 
-                                    final_result_df.columns[1]: "Precipitation"
+                                    final_result_df.columns[1]: "Precipitation",
                                     final_result_df.columns[2]: "Temperature"}, inplace = True)
 
     return final_result_df
