@@ -47,4 +47,3 @@ def cleanDownloadedData(downloaded):
 def saveDownloadedAndCleanedData():
     cleanDownloadedData(downloadData()).to_csv("Export_test.csv")
 
-saveDownloadedAndCleanedData()
