@@ -14,4 +14,4 @@ RUN pip install poetry \
 
 VOLUME /home/mlops/data
 
-ENTRYPOINT ["poetry", "run", "testcsv"]
+ENTRYPOINT ["poetry", "run", "testparquet"]

@@ -15,7 +15,7 @@ RUN mkdir colares_project
 COPY --chown=novamlops colares_project/ colares_project/
 RUN pip install poetry \
     && poetry install \
-    && poetry run testcsv \
+    && poetry run testparquet \
     && rm -rf colares_project/ pyproject.toml poetry.lock
 
 ENTRYPOINT cat Export_test.csv
