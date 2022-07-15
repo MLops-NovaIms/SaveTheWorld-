@@ -59,6 +59,6 @@ def saveAsParquet(path = "Export_test.parquet"):
         path= sys.argv[1]
     df = cleanDownloadedData(downloadData())
     df_parquet = pa.Table.from_pandas(df)
-    pq.write(df_parquet, path)
+    pq.write_table(df_parquet, path)
 
     
