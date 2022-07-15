@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from subprocess import Popen, PIPE
+import sys
 
 
 def downloadData():
@@ -47,4 +48,6 @@ def cleanDownloadedData(downloaded):
 
 
 def saveDownloadedAndCleanedData(path = "Export_test.csv"):
+    if len(sys.argv) >= 2:
+        path= sys.argv[1]
     cleanDownloadedData(downloadData()).to_csv(path)
