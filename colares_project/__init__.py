@@ -2,6 +2,8 @@ import pandas as pd
 import numpy as np
 from subprocess import Popen, PIPE
 import sys
+import pyarrow as pa
+import pyarrow.parquet as pq
 
 
 def downloadData():
@@ -51,3 +53,12 @@ def saveDownloadedAndCleanedData(path = "Export_test.csv"):
     if len(sys.argv) >= 2:
         path= sys.argv[1]
     cleanDownloadedData(downloadData()).to_csv(path)
+
+def saveAsParquet(path = "Export_test.parquet"):
+    if len(sys.argv) >= 2:
+        path= sys.argv[1]
+    df = cleanDownloadedData(downloadData())
+    df_parquet = pa.Table.from_pandas(df)
+    pq.write(df_parquet, path)
+
+    
