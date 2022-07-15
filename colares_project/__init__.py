@@ -46,6 +46,5 @@ def cleanDownloadedData(downloaded):
     return final_result_df
 
 
-def saveDownloadedAndCleanedData():
-    cleanDownloadedData(downloadData()).to_csv("Export_test.csv")
-
+def saveDownloadedAndCleanedData(path = "Export_test.csv"):
+    cleanDownloadedData(downloadData()).to_csv(path)
